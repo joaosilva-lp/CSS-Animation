@@ -1,0 +1,311 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #EDC1D3, #91BDEC);
+    background-repeat: repeat-y;
+    place-items: center;
+    margin: auto;
+    height: 100%;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    width: 70%;
+}
+
+#title {
+    color: rgb(4, 83, 93);
+    font-weight: bolder;
+    font-size: 40pt;
+}
+
+#subtitle {
+    color: rgb(50, 116, 85);
+    font-weight: bolder;
+    font-size: 30pt;
+}
+
+h3 {
+    color: hsl(291, 100%, 21%);
+    font-size: 20pt;
+    text-transform: uppercase;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-evenly;
+}
+
+.item {
+    border: 1px solid rgb(161, 130, 202);
+    display: block;
+    position: relative;
+    background-color: #2959743b;
+    padding: 10px;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    margin-left: 35px;
+    margin-right: 35px;
+    box-shadow: 10px 10px #564797;
+}
+
+.scale-up {
+    margin: auto;
+    background-color: green;
+    width: 200px;
+    height: 200px;
+}
+
+.scale-up:hover {
+    margin: auto;
+    animation-name: scale-up;
+    animation-duration: 5000ms;
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+@keyframes scale-up {
+    0% {
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.change-color {
+    color: green;
+    margin: auto;
+    background-color: green;
+    width: 200px;
+    height: 200px;
+}
+
+.change-color:hover {
+    color: green;
+    margin: auto;
+    animation-name: change-color;
+    animation-duration: 2000ms;
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+@keyframes change-color {
+    0% {
+        background-color: green;
+    }
+    100% {
+        background-color: blue;
+    }
+}
+
+.skew {
+    margin: auto;
+    background-color: green;
+    width: 200px;
+    height: 200px;
+}
+
+.skew:hover {
+    margin: auto;
+    animation-name: skew;
+    animation-duration: 2000ms;
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+@keyframes skew {
+    50% {
+        transform: skewX(45deg);
+    }
+    100% {
+        transform: skewY(20deg);
+    }
+}
+
+.type {
+    animation: type 5000ms steps(30, end) forwards infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 8px solid purple;
+    width: 0;
+    height: 18pt;
+    align-items: center;
+    text-align: center;
+}
+
+@keyframes type {
+    from {
+        width: 0
+    }
+    to {
+        width: 60%;
+    }
+}
+
+.bola {
+    animation-name: bola;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-duration: 10000ms;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+@keyframes bola {
+    0% {
+        transform: translateY(100px);
+    }
+    10% {
+        transform: translateX(80px);
+    }
+    20% {
+        transform: translateY(150px);
+    }
+    30% {
+        transform: translateX(250px);
+    }
+    40% {
+        transform: translateY(250px);
+    }
+    50% {
+        transform: translateX(120px);
+    }
+    60% {
+        transform: translateY(200px);
+    }
+    70% {
+        transform: translateX(50px);
+    }
+    80% {
+        transform: translateX(200px);
+    }
+    90% {
+        transform: translateY(150px);
+    }
+    100% {
+        transform: translateX(90px);
+    }
+}
+
+.move-right {
+    align-self: flex-start;
+    background-color: green;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: move-right 2000ms infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move-right {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(250px);
+    }
+}
+
+.up {
+    background-color: green;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: up 1000ms infinite;
+}
+
+@keyframes up {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(200px);
+    }
+}
+
+.blinking {
+    text-align: center;
+    animation: blinking 2000ms infinite;
+    align-items: center;
+}
+
+@keyframes blinking {
+    from {
+        color: #564797;
+    }
+    to {
+        color: transparent;
+    }
+}
+
+.bg {
+    background-color: black;
+    width: 300px;
+    height: 400px;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+}
+
+h4 {
+    padding: 120px;
+    color: white;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px red, 0 0 82px red, 0 0 92px red, 0 0 102px red;
+    margin: auto;
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+    position: absolute;
+    font-size: 20pt;
+    overflow: hidden;
+}
+
+.shadow {
+    margin: auto;
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    box-shadow: 20px 30px lime;
+}
+
+.circular {
+    margin: auto;
+    background-color: green;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: infinite;
+    animation-name: circular;
+    animation-duration: 1000ms;
+    margin-top: 100px;
+}
+
+@keyframes circular {
+    from {
+        transform: rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+}
