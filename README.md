@@ -1,4 +1,4 @@
-# CSS-Animation
+# CSS-Animations
 Some random css animations
 
 1) Scale Up
